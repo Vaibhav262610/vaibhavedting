@@ -84,6 +84,37 @@ h2{margin-bottom:0;font-size:clamp(3rem,5.2vw,5.8rem);font-weight:600;letter-spa
 .work-feature-copy .card-kicker{color:var(--lime)}
 .work-feature-copy h3{margin:20px 0;font-size:clamp(2.7rem,3.6vw,4.3rem);font-weight:500;letter-spacing:-.07em;line-height:1.05}
 .work-feature-copy p{max-width:410px;margin:0 0 32px;color:#b6c0b2;line-height:1.75}
+.portfolio-category-nav{display:flex;flex-wrap:wrap;gap:10px;margin:-11px 0 30px}
+.portfolio-category-nav a{padding:9px 15px;border:1px solid #c6cbbd;border-radius:50px;color:#414a3b;font-family:"Space Grotesk",sans-serif;font-size:13px;font-weight:600;transition:background .2s,color .2s,border-color .2s}
+.portfolio-category-nav a:hover{background:var(--ink);border-color:var(--ink);color:var(--cream)}
+.portfolio-category{margin-top:92px;scroll-margin-top:98px}
+.portfolio-category-head{display:flex;align-items:end;justify-content:space-between;gap:50px;margin-bottom:28px;padding-top:28px;border-top:1px solid var(--dark-line)}
+.category-kicker{color:#74883b;font-family:"Space Grotesk",sans-serif;font-size:12px;font-weight:700;letter-spacing:.16em}
+.portfolio-category-head h3{margin:12px 0 0;font-size:clamp(2.5rem,4.3vw,4.3rem);font-weight:600;letter-spacing:-.065em}
+.portfolio-category-head p{max-width:390px;margin:0 0 4px;color:#5f675c;line-height:1.65}
+.portfolio-video-grid{display:grid;gap:22px}
+.landscape-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.short-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.video-card{min-width:0}
+.video-placeholder{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(140deg,#1a2b21,#536248);color:var(--cream)}
+.video-placeholder::before{content:"";position:absolute;z-index:-1;inset:0;opacity:.48;background:linear-gradient(90deg,transparent 33.2%,rgba(255,255,255,.13) 33.3%,transparent 33.4%,transparent 66.5%,rgba(255,255,255,.13) 66.6%,transparent 66.7%),linear-gradient(0deg,transparent 33.2%,rgba(255,255,255,.13) 33.3%,transparent 33.4%,transparent 66.5%,rgba(255,255,255,.13) 66.6%,transparent 66.7%)}
+.video-placeholder::after{content:"";position:absolute;inset:13px;border:1px solid rgba(255,255,255,.4);pointer-events:none}
+.video-placeholder-alt{background:linear-gradient(140deg,#17221c,#45544b)}
+.video-placeholder-brand{background:linear-gradient(140deg,#2c2925,#7c6457)}
+.video-placeholder-brand.video-placeholder-alt{background:linear-gradient(140deg,#292421,#61584f)}
+.video-placeholder-short{width:min(100%,214px);max-height:381px;aspect-ratio:9/16;margin-inline:auto;background:linear-gradient(145deg,#14282e,#3d6770)}
+.video-placeholder-short.video-placeholder-alt{background:linear-gradient(145deg,#213245,#596784)}
+.video-placeholder-short.video-placeholder-third{background:linear-gradient(145deg,#293a3a,#557967)}
+.video-placeholder-format{position:absolute;top:24px;left:24px;color:#e8eee2;font-family:"Space Grotesk",sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em}
+.video-placeholder-center{display:flex;flex-direction:column;align-items:center;gap:18px;padding:20px;text-align:center}
+.video-placeholder-center img{width:66px;height:66px;opacity:.62}
+.video-placeholder-center span{font-family:"Space Grotesk",sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em;line-height:1.4}
+.video-card-meta{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:18px 1px 0}
+.video-card-meta h4{margin:0;font-family:"Space Grotesk",sans-serif;font-size:22px;font-weight:600;letter-spacing:-.05em;line-height:1.2}
+.video-card-meta span{flex:none;color:#71803c;font-family:"Space Grotesk",sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em}
+.short-grid .video-card{padding:22px;background:#e5e8de}
+.short-grid .video-card-meta{padding-top:18px}
+.short-grid .video-card-meta h4{font-size:19px}
 .services{background:#151914;color:var(--cream);border-top:1px solid rgba(255,255,255,.06)}
 .services-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:8%}
 .services-intro{position:relative;min-height:520px}
@@ -143,3 +174,5 @@ h2{margin-bottom:0;font-size:clamp(3rem,5.2vw,5.8rem);font-weight:600;letter-spa
 @media(max-width:1100px){.work-feature{grid-template-columns:1fr .9fr}.work-feature-copy{padding:36px}}
 @media(max-width:800px){.work-feature{grid-template-columns:1fr}.work-screen{min-height:420px}.work-feature-copy{padding:46px}.services-signature{display:none}}
 @media(max-width:580px){.brand-icon{height:36px;width:36px}.brand-name strong{font-size:14px}.brand-name span{font-size:8px;letter-spacing:.23em}.work-screen{min-height:310px;padding:22px}.work-screen::after{inset:11px}.work-screen-top,.work-screen-bottom{font-size:8px;letter-spacing:.1em}.work-screen-center{font-size:10px;letter-spacing:.19em}.work-screen-center img{width:86px;height:86px}.work-feature-copy{padding:33px 25px 37px}.work-feature-copy h3{font-size:clamp(2.45rem,10.5vw,3.1rem)}}
+@media(max-width:800px){.portfolio-category{margin-top:70px}.portfolio-category-head{display:block}.portfolio-category-head p{max-width:550px;margin-top:16px}.portfolio-category-head h3{font-size:clamp(2.4rem,6vw,3.6rem)}.video-card-meta h4{font-size:19px}.short-grid{gap:12px}.short-grid .video-card{padding:14px}.short-grid .video-card-meta{display:block}.short-grid .video-card-meta span{display:block;margin-top:8px}}
+@media(max-width:580px){.portfolio-category-nav{gap:8px;margin-bottom:22px}.portfolio-category-nav a{font-size:12px;padding:8px 12px}.portfolio-category{margin-top:62px}.portfolio-category-head{padding-top:22px;margin-bottom:22px}.portfolio-category-head h3{font-size:clamp(2.2rem,10vw,3rem)}.portfolio-video-grid{gap:25px}.landscape-grid{grid-template-columns:1fr}.short-grid{grid-auto-flow:column;grid-auto-columns:77%;grid-template-columns:none;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:15px}.short-grid .video-card{scroll-snap-align:start;padding:16px}.short-grid .video-card-meta{display:flex;align-items:start}.short-grid .video-card-meta h4{font-size:18px}.short-grid .video-card-meta span{margin:3px 0 0;font-size:10px}.video-placeholder-format{top:20px;left:20px}.video-card-meta h4{font-size:20px}}
