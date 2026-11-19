@@ -38,6 +38,37 @@ if (copyButton && copyStatus) {
   });
 }
 
+const videoDialog = document.querySelector('#video-dialog');
+if (videoDialog) {
+  const frame = videoDialog.querySelector('iframe');
+  const title = videoDialog.querySelector('#video-dialog-title');
+  const driveLink = videoDialog.querySelector('#video-dialog-drive-link');
+  const closeButton = videoDialog.querySelector('.video-dialog-close');
+
+  document.querySelectorAll('[data-video-id]').forEach(button => {
+    button.addEventListener('click', () => {
+      const videoId = button.dataset.videoId;
+      const videoTitle = button.dataset.videoTitle || 'Portfolio video';
+      const fileUrl = `https://drive.google.com/file/d/${encodeURIComponent(videoId)}`;
+      title.textContent = videoTitle;
+      frame.title = `Video player: ${videoTitle}`;
+      frame.src = `${fileUrl}/preview`;
+      driveLink.href = `${fileUrl}/view`;
+      if (typeof videoDialog.showModal === 'function') {
+        videoDialog.showModal();
+        closeButton.focus();
+      } else {
+        window.open(driveLink.href, '_blank', 'noopener,noreferrer');
+        frame.removeAttribute('src');
+      }
+    });
+  });
+
+  closeButton.addEventListener('click', () => videoDialog.close());
+  videoDialog.addEventListener('click', event => { if (event.target === videoDialog) videoDialog.close(); });
+  videoDialog.addEventListener('close', () => frame.removeAttribute('src'));
+}
+
 const year = document.querySelector('#year');
 if (year) year.textContent = String(new Date().getFullYear());
 
