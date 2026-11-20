@@ -2,3 +2,8 @@ qa-tools/
 qa-edge-profile/
 qa-*.png
 qa.cjs
+node_modules/
+.next/
+out/
+.vercel/
+.env*
